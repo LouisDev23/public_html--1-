@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Dominus Dune Tours Logo.jpg" type="image/x-icon">
+    <title>Spitzkoppe Tour</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("Photos/_12e99f90-0c8e-4e28-be8e-7493d8205f90.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #f7f7f7;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .backbtn {
+            display: block;
+            float: left;
+            margin-left: 10px;
+            padding: 8px 16px;
+            background-color: #c7c7c7;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        header {
+            background: linear-gradient(to bottom, rgb(134, 99, 99), rgb(161, 70, 70));
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .background {
+            padding-bottom: 20px;
+        }
+
+        .image {
+            max-width: 80%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .reasons {
+            margin-bottom: 20px;
+            line-height: 30px;
+            background-color: rgba(255, 255, 255, 0.623);
+            padding: 20px;
+            border: solid black 2px;
+            max-width: 600px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .reasons h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .reasons ul {
+            list-style: none;
+            padding-left: 0;
+            font-size: 1.1rem;
+            color: #222;
+        }
+
+        .reasons ul li {
+            position: relative;
+            margin-bottom: 10px;
+            padding-left: 40px;
+            background-image: url('Photos/dune.png');
+            background-size: 30px;
+            background-repeat: no-repeat;
+            background-position: left top;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .social-icons img {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+  <div class="topnav" id="myTopnav">
+    <nav class="navbar navbar-expand-lg navbar-dark"> <!-- Change bg-dark to bg-danger -->
+        <img src="Photos/Untitled__1_-removebg-preview.png" id="logo" alt="Dominus Logo" class="action" width="100px" height="100" />
+
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="toursDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="Photos/jeep_5262039.png" width="20px"> Tours
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="toursDropdown">
+                        <a class="dropdown-item" href="Sandwich_harbour.html">Sandwich Harbor</a>
+                        <a class="dropdown-item" href="Sandwich_self_drive.html">Sandwich Harbor Self Drive</a>
+                        <a class="dropdown-item" href="Moonvalley.html">Moon Valley</a>
+                        <a class="dropdown-item" href="Spitzkoppe.html">Spitzkoppe</a>
+                        <a class="dropdown-item" href="Langstrand_dune_excursion.html">Langstrand</a>
+                        <a class="dropdown-item" href="Dune_board_tour.html">Dune Boarding</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="galleryDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="Photos/picture_7596772.png" width="20px"> Gallery
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="galleryDropdown">
+                        <a class="dropdown-item" href="Sandwich_harbour.html#gallery">Sandwich Harbor</a>
+                        <a class="dropdown-item" href="Sandwich_self_drive.html#gallery">Sandwich Harbor Self Drive</a>
+                        <a class="dropdown-item" href="Moonvalley.html#gallery">Moon Valley</a>
+                        <a class="dropdown-item" href="Spitzkoppe.html#gallery">Spitzkoppe</a>
+                        <a class="dropdown-item" href="Langstrand_dune_excursion.html#gallery">Langstrand</a>
+                        <a class="dropdown-item" href="Dune_board_tour.html#gallery">Dune Boarding</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="contact-us-link"><img src="Photos/contact-us_6766388.png" width="20px"> Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="popup-overlay" id="contact-popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h3>Bookings:</h3>
+        <p>Business Name: Dominus Dune Tours</p>
+        <p>Phone Number: +264 81 633 5151</p>
+        <h3>More information follow us at:</h3>
+        <ul class="social-icons">
+            <a href="https://wa.me/264816335151" target="_blank" rel="noopener noreferrer"><img src="Photos/whatsapp.png" alt="WhatsApp" width="20"></a>
+            <a href="https://www.facebook.com/share/VUa9AeseEsPEuhJH/?mibextid=qi2Omg" target="_blank" rel="noopener noreferrer"><img src="facebook.jpg" alt="Facebook" width="20"></a>
+            <a href="https://www.instagram.com/johannestruter/" target="_blank" rel="noopener noreferrer"><img src="instagram.jpg" alt="Instagram" width="20"></a>
+            <a href="https://www.youtube.com/@DominusDuneDrivingSchool" target="_blank" rel="noopener noreferrer"><img src="youtube.png" alt="YouTube" width="20"></a>
+        </ul>
+    </div>
+</div>
+    
+    <div class="background">
+        <h2>Spitzkoppe</h2>
+        <p class="title-info text-center">Come and experience the mighty Spitzkoppe towering over the surrounding landscapes. Nicknamed the Matterhorn of Africa because of its sharp peak, Spitzkoppe also hides a lot of history. As you ascend the mountain, a local guide will share fascinating history while showing you rock drawings of the old tribes who once called Spitzkoppe their home. Enjoy the stunning views and the freedom that Spitzkoppe offers!</p>
+    </div>
+
+    <div class="reasons">
+        <h2>What the tour offers:</h2>
+        <ul>
+            <li>Half Day Tour (+-5 Hours)</li>
+            <li>Located 40km East of Swakopmund</li>
+            <li>Drive to Viewpoint</li>
+            <li>See Lichen field</li>
+            <li>Look at rock formations and plants</li>
+            <li>See Welwitschia (oldest plant in the world)</li>
+            <li>See the musical rocks</li>
+            <li>Have a nice lunch</li>
+        </ul>
+
+        <h2>Combination Tours</h2>
+        <ul>
+            <li>Spitzkoppe and Moon Valley</li>
+            <li>Spitzkoppe and Sandwich Harbor</li>
+            <li>Spitzkoppe and Dune Boarding</li>
+        </ul>
+    </div>
+
+   
+    <footer class="site-footer">
+        <div class="container">
+                 <!-- Column 1: Logo -->
+            
+            <!-- Tours and Gallery Lists -->
+            <div class="footer-lists">
+                <div class="footer-column logo">
+                    <img src="Photos/Dominus_Dune_Tours_Logo-removebg-preview.png" alt="Dominus Dune Tours Logo" height="200px" />
+                </div>
+                <div class="footer-column tours">
+                    <h6>Our Tours</h6>
+                    <ul>
+                        <li ><a href="Sandwich_harbour.html">Sandwich Harbor</a></li>
+                        <li><a href="Sandwich_self_drive.html">Sandwich Harbor Self Drive</a></li>
+                        <li><a href="Moonvalley.html">Moon Valley</a></li>
+                        <li><a href="Spitzkoppe.html">Spitzkoppe</a></li>
+                        <li><a href="Langstrand_dune_excursion.html">Langstrand</a></li>
+                        <li><a href="Dune_board_tour.html">Dune Boarding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column gallery">
+                    <h6>Gallery</h6>
+                    <ul>
+                        <li class="list-inline-item"><a href="Sandwich_harbour.html#gallery">Sandwich Harbor</a></li>
+        <li><a href="Sandwich_self_drive.html#gallery">Sandwich Harbor Self Drive</a></li>
+        <li><a href="Moonvalley.html#gallery">Moon Valley</a></li>
+        <li><a href="Spitzkoppe.html#gallery">Spitzkoppe</a></li>
+        <li><a href="Langstrand_dune_excursion.html#gallery">Langstrand</a></li>
+        <li><a href="Dune_board_tour.html#gallery">Dune Boarding</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Follow Us Section -->
+            <div class="footer-follow">
+                <h6>Follow Us</h6>
+                <div class="social-icons">
+                    <a href="https://wa.me/264816335151" target="_blank" rel="noopener noreferrer">
+                        <img src="Photos/whatsapp.png" alt="WhatsApp" width="20">
+                    </a>
+                    <a href="https://www.facebook.com/DominusDuneTours" target="_blank" rel="noopener noreferrer">
+                        <img src="facebook.jpg" alt="Facebook" width="20">
+                    </a>
+                    <a href="https://www.instagram.com/dominus_dune_tours" target="_blank" rel="noopener noreferrer">
+                        <img src="instagram.jpg" alt="Instagram" width="20">
+                    </a>
+                    <a href="https://www.youtube.com/@DominusDuneDrivingSchool" target="_blank" rel="noopener noreferrer"><img src="youtube.png" alt="YouTube" width="20"></a>
+
+                </div>
+            </div>
+    
+            <!-- Copyright Notice -->
+            <div class="footer-bottom">
+                <p>© 2024 Dominus Dune Tours. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+
+</html>

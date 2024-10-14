@@ -1,0 +1,550 @@
+/* Base Styles */
+a {
+  color: white; /* Updated link color for better contrast */
+  transition: color 0.3s;
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0; /* Reset default margin */
+  background-color: #f4f4f4; /* Light background for contrast */
+}
+
+/* Logo Styles */
+#logo {
+  height: 80px; /* Slightly reduced height for a modern look */
+  margin: 5px;
+}
+
+.navbar {
+  background-color: #a66d6d; /* Replace with your logo's color */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #f7f7f7; /* Light text color for contrast */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fff; /* Change text color on hover */
+}
+
+.navbar-dark .navbar-brand {
+  color: #f7f7f7; /* Light color for brand */
+}
+
+.navbar-dark .navbar-brand:hover {
+  color: #fff; /* Change brand color on hover */
+}
+
+
+.social-icons {
+  display: flex;
+  justify-content: center; /* Center align icons */
+  margin-top: 15px; /* Space above the icons */
+}
+
+.social-icons a {
+  margin-right: 15px; /* Spacing between icons */
+  text-decoration: none;
+  color: #fff; /* Icon color */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Added opacity transition */
+  position: relative; /* For positioning pseudo-elements */
+}
+
+.social-icons a img {
+  width: 35px; /* Slightly larger size for better visibility */
+  height: auto;
+  border-radius: 50%; /* Add rounded corners for a professional touch */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  transition: transform 0.3s ease; /* Transition for the scale effect */
+}
+
+.social-icons a:hover {
+  transform: scale(1.1); /* Slightly increased scale on hover */
+  opacity: 0.9; /* Change opacity on hover */
+}
+
+.social-icons a:hover::before {
+  content: ""; /* Show background on hover */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.2); /* Lighten background on hover */
+  border-radius: 50%; /* Match the shape of the icons */
+  z-index: -1; /* Place background behind the icon */
+}
+
+#customAlert {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #e39aec;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Popup Styles */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.popup-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  max-height: 80%;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 10px;
+}
+
+.popup-content h3 {
+  color: #333;
+}
+
+.popup-content p {
+  color: #555;
+}
+
+.popup-content .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #aaa;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.img {
+  width: 250px;
+  aspect-ratio: 2/1;
+  margin: 10px;
+  border: 5px solid #fefae0;
+  -webkit-filter: sepia(50%);
+  filter: sepia(50%);
+  transition-duration: 1s;
+  border-radius: 10px;
+}
+
+.img:hover {
+  border: 5px solid #fff;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-filter: none;
+  filter: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+h1 {
+  text-align: center;
+  font-size: calc(2.5vw + 1.5rem); /* Example calculation for h1 */
+}
+
+h2 {
+  font-size: calc(2.5vw + 1.5rem); /* Minimum: 1.5rem, responsive growth using 5vw, Maximum: 2rem */
+  text-align: center;
+  margin: 0;
+}
+
+h3 {
+  font-size: calc(1vw + 0.5rem); /* Example calculation for h3 */
+}
+
+.title-info {
+  padding: 5% 15%; /* Adjust padding for top/bottom and left/right */
+  font-size: 1.4rem; /* Increase paragraph text size slightly */
+  line-height: 1.8; /* Further increase line spacing for readability */
+  text-align: center; /* Center the text */
+  margin: 10% auto; /* Add space around the info section */
+  max-width: 80%; /* Limit the width of the text */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Styling for the list image and the reasons container */
+.reasons {
+  background-color: rgba(255, 255, 255, 0.623); /* Semi-transparent background */
+  padding: 20px;
+  border: solid black 2px;
+  max-width: 600px;
+  margin: 20px auto; /* Centers the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reasons h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.reasons ul {
+  list-style: none; /* Remove the default list-style */
+  padding-left: 0; /* Remove extra indentation */
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.reasons ul li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 40px; /* Space for the image */
+  background-image: url('Photos/dune.png'); /* Add your dune.png image */
+  background-size: 30px; /* Adjust size of the image */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  background-position: left top; /* Position the image */
+}
+
+/* Apply the animation to the sections */
+.reasons h2,
+.reasons ul {
+  animation: fadeIn 1s ease-in-out;
+  opacity: 0; /* Initially hidden */
+  animation-fill-mode: forwards; /* Keep the final state of the animation */
+}
+
+.reasons h2:nth-child(1) {
+  animation-delay: 0.3s; /* Delays for staggered effect */
+}
+
+.reasons ul:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.reasons h2:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+.reasons ul:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.containerimg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Popup styles */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+  color: rgb(250, 246, 246);
+  text-align: center;
+}
+
+.close {
+  cursor: pointer;
+  font-size: 20px;
+  float: right;
+  margin-top: -10px;
+  margin-right: -10px;
+}
+
+.site-footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+.gallery-container {
+  padding: 20px 0; /* Add padding for top and bottom */
+}
+
+#gallery {
+  margin-bottom: 30px;
+  font-size: 2rem; /* Adjust size as needed */
+  color: #fdfdfd; /* Dark color for title */
+}
+
+.gallery-row {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: center; /* Center items in the row */
+}
+
+.gallery-item {
+  width: 200px; /* Fixed width for each item */
+  margin: 15px; /* Space between items */
+  position: relative; /* Needed for overlay effect */
+  border: 3px solid #fefae0; /* Border around images */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensures border radius is respected */
+  transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+  transition: transform 0.3s ease; /* Smooth scale transition */
+
+}
+
+.gallery-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+  transform: scale(1.05); /* Scale effect on hover */
+
+}
+
+.gallery-item img {
+  width: 100%; /* Make image responsive within its container */
+  height: 100px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensures images cover the area without distortion */
+  border-radius: 10px; /* Rounded corners for a modern look */
+
+}
+
+
+
+.footer-logo p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #f2f2f2; /* Lighter color for description */
+}
+
+.footer-lists {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping for mobile */
+  margin-bottom: 20px;
+}
+
+.footer-column {
+  flex: 2;
+  margin: 0 10px;
+  text-align: left;
+}
+
+.footer-column h6 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin: 5px 0;
+}
+
+.footer-column ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-follow {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-follow h6 {
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  margin-right: 15px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: auto;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+  justify-content: center; /* Center the content */
+  align-items: center; /* Center the content */
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  #gallery {
+    font-size: 1.8rem; /* Adjust title size for mobile */
+}
+
+.gallery-item {
+    flex: 1 1 100%; /* Full width on small screens */
+    max-width: 200px; /* Ensure it doesn't exceed 300px */
+}
+ 
+  .footer-lists {
+    flex-direction: column; /* Stack lists vertically */
+    align-items: center; /* Center items */
+}
+
+.footer-column {
+    margin: 10px 0; /* Add space between stacked columns */
+    text-align: center; /* Center text for mobile */
+}
+
+.social-icons {
+    margin-bottom: 10px; /* Space between icons and copyright */
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+  justify-content: center; /* Center the content */
+  align-items: center; /* Center the content */
+}
+
+
+
+  .img {
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    border: 5px solid #fefae0;
+    -webkit-filter: sepia(50%);
+    filter: sepia(50%);
+    transition-duration: 0.5s;
+  }
+
+  .img:hover {
+    border: 5px solid #fff;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-filter: none;
+    filter: none;
+  }
+
+  .containerimg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+p {
+  font-size: 18px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: disc;
+  font-size: 16px;
+}
+
+.title-info {
+  padding: 5px 50px 50px 50px;
+}
+
+.reasons {
+  text-align: left; /* Keeps the text left-aligned but container centered */
+  max-width: 80%; /* Optional: Adjust width on larger screens */
+}
+}
